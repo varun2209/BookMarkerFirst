@@ -1,0 +1,33 @@
+            // Send the data using post
+            var posting = $.post(url, {
+                username: user,
+                passcode: password
+            });
+
+            // Put the results in a div
+            posting.done(function (data) {
+                //$( "#result" ).html( data );
+                if (!data) {
+                    var alertmessage = 'No such user.';
+                    $("#result").html(alertmessage);
+                } else {
+                    window.location.href = data;
+                }
+				
+				
+// Send the data using post
+            var posting = $.post(url, {
+                username: user,
+                passcode: password,
+                confirmpasscode: confirmpassword
+            });
+
+            // Put the results in a div
+            posting.done(function (data) {
+                //$( "#result" ).html( data );
+                if (!data) {
+                    var alertmessage = "Failed to connect.";
+                    $("#result").html(alertmessage);
+                } else {
+                    window.location.href = data;
+                }
