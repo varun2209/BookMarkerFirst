@@ -48,6 +48,7 @@ $(document).ready(function () {
                     var alertmessage = "User already exists.";
                     $("#result").html(alertmessage);
                 } else {
+                    alert("Registration successful.");
                     window.location.href = data;
                 }
             });
